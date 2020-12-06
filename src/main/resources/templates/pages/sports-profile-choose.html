@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<div class="application block" th:fragment="content">
+    <div class="content">
+        <form class="application" th:action="@{/sports-profile}" accept-charset="UTF-8"
+              method="post" th:object="${sportsProfile}" novalidate autocomplete="off">
+            <fieldset>
+                <a th:href="${sportsProfile.polarLink}">POLAR TEST</a>
+            </fieldset>
+            <br>
+        </form>
+    </div>
+</div>

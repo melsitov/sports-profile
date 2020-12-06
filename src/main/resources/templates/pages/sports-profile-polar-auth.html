@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<div class="application block" th:fragment="content">
+    <div class="content">
+        <form class="application" th:action="@{/sports-profile/polar-auth}" accept-charset="UTF-8"
+              method="post" th:object="${polarAuth}" novalidate autocomplete="off">
+            <fieldset>
+                <span th:text="#{polar-auth.clientId}"></span>
+                <input th:field="${polarAuth.clientId}"/>
+            <br/>
+                <span th:text="#{polar-auth.clientSecret}"></span>
+                <input th:field="${polarAuth.clientSecret}"/>
+            </fieldset>
+            <br>
+        </form>
+    </div>
+</div>
