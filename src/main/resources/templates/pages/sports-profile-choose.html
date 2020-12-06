@@ -4,7 +4,9 @@
         <form class="application" th:action="@{/sports-profile}" accept-charset="UTF-8"
               method="post" th:object="${sportsProfile}" novalidate autocomplete="off">
             <fieldset>
-                <a th:href="${sportsProfile.polarLink}">POLAR TEST</a>
+                <a th:href="${sportsProfile.polarLink}">POLAR</a>
+                <p style="margin-block-end: 0px; margin-block-start: 5px"
+                   th:text="#{sportsProfile.polar.description}"></p>
             </fieldset>
             <br>
         </form>

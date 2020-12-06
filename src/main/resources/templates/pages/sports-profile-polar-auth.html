@@ -3,12 +3,43 @@
     <div class="content">
         <form class="application" th:action="@{/sports-profile/polar-auth}" accept-charset="UTF-8"
               method="post" th:object="${polarAuth}" novalidate autocomplete="off">
+            <h2 th:text="#{polar-auth.setup.title}"></h2>
+            <h3 th:text="#{polar-auth.setup.firstTime.title}"
+                style="margin-block-end: 0px; margin-block-start: 5px"></h3>
+            <ul style="margin-block-end: 0px; margin-block-start: 0px">
+                <li th:text="#{polar-auth.setup.firstTime.stepOne}"></li>
+                <li th:text="#{polar-auth.setup.firstTime.stepTwo}"></li>
+                <li th:text="#{polar-auth.setup.firstTime.stepThree}"></li>
+                <li th:text="#{polar-auth.setup.firstTime.stepFour}"></li>
+            </ul>
+            <br />
+            <h3 th:text="#{polar-auth.setup.everyTime.title}"
+                style="margin-block-end: 0px; margin-block-start: 5px"></h3>
+            <ul style="margin-block-end: 0px; margin-block-start: 0px">
+                <li th:text="#{polar-auth.setup.everyTime.stepOne}"></li>
+                <li th:text="#{polar-auth.setup.everyTime.stepTwo}"></li>
+                <li th:text="#{polar-auth.setup.everyTime.stepThree}"></li>
+                <li th:text="#{polar-auth.setup.everyTime.stepFour}"></li>
+                <li th:text="#{polar-auth.setup.everyTime.stepFive}"></li>
+            </ul>
+            <br />
+
             <fieldset>
-                <span th:text="#{polar-auth.clientId}"></span>
-                <input th:field="${polarAuth.clientId}"/>
-            <br/>
-                <span th:text="#{polar-auth.clientSecret}"></span>
-                <input th:field="${polarAuth.clientSecret}"/>
+                <table>
+                    <tr>
+                        <td width="40%" th:text="#{polar-auth.clientId}"></td>
+                        <td width="60%">
+                            <input th:field="${polarAuth.clientId}" />
+                        </td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td width="40%" th:text="#{polar-auth.clientSecret}"></td>
+                        <td width="60%">
+                            <input th:field="${polarAuth.clientSecret}" />
+                        </td>
+                    </tr>
+                </table>
             </fieldset>
             <br>
         </form>
