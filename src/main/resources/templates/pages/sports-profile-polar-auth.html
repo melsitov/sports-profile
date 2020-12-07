@@ -27,20 +27,37 @@
             <fieldset>
                 <table>
                     <tr>
-                        <td width="40%" th:text="#{polar-auth.clientId}"></td>
-                        <td width="60%">
+                        <td width="20%" th:text="#{polar-auth.clientId}"></td>
+                        <td width="20%">
                             <input th:field="${polarAuth.clientId}" />
                         </td>
+                        <td style="horiz-align: left; color: crimson" width="10%">
+                            <span th:if="${#fields.hasErrors('clientId')}"
+                                  th:errors="*{clientId}">
+                    </span>
+                        </td>
+                        <td width="50%"></td>
                     </tr>
                     <br />
                     <tr>
-                        <td width="40%" th:text="#{polar-auth.clientSecret}"></td>
-                        <td width="60%">
+                        <td width="20%" th:text="#{polar-auth.clientSecret}"></td>
+                        <td width="20%">
                             <input th:field="${polarAuth.clientSecret}" />
                         </td>
+                        <td style="horiz-align: left; color: crimson" width="10%">
+                            <span th:if="${#fields.hasErrors('clientSecret')}"
+                                  th:errors="*{clientSecret}">
+                    </span>
+                        </td>
+                        <td width="50%"></td>
                     </tr>
                 </table>
             </fieldset>
+            <br/>
+            <button style="margin-left: 2px" type="submit">
+                <span class="text" th:text="#{button.continue}"></span>
+            </button>
+
             <br>
         </form>
     </div>
